@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="페이지-1" id="9iILnwIiuNrRD6EVz0-I">
-    <mxGraphModel dx="863" dy="429" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1036" dy="515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,7 +10,7 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-54" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-55" target="nFpczwYycdGY-wKEFIsx-57">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-55" value="*(KEY_ptr + 2) = 0b1111&lt;br&gt;&lt;font&gt;KEY3~0에 interrupt mask 설정&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-55" value="&lt;font&gt;KEY0에 interrupt mask 설정&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="330" width="280" height="70" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-56" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-57" target="nFpczwYycdGY-wKEFIsx-59">
@@ -120,7 +120,7 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-86" target="nFpczwYycdGY-wKEFIsx-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-86" value="period = 100,000&lt;br&gt;*(TIMER_ptr + 2) = period의 하위 16bit&lt;br&gt;*(TIMER_ptr + 3) = period의 상위 16bit&lt;br&gt;*(TIMER_ptr + 1) = 0b0111&lt;br&gt;ms의 주기는 100,000&lt;br&gt;periodl과 periodh에 값을 입력&lt;br&gt;control register에 0111을 입력해 CONT와 ITO 모드로 start" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-86" value="타이머 주기 설정&lt;div&gt;period = 100,000&lt;br&gt;*(TIMER_ptr + 1) = 0b0111&lt;br&gt;ms의 주기는 100,000&lt;br&gt;periodl과 periodh에 값을 입력&lt;br&gt;control register에 0111을 입력해 CONT와 ITO 모드로 start&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="120" width="280" height="190" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-89" target="nFpczwYycdGY-wKEFIsx-92">
