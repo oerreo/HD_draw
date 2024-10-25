@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="페이지-1" id="9iILnwIiuNrRD6EVz0-I">
-    <mxGraphModel dx="1884" dy="936" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2307" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -274,9 +274,6 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-134" value="변환한 binary code를 각 출력될 HEX의 위치에 맞게 shift 후 병합" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;" vertex="1" parent="1">
           <mxGeometry x="2040" y="1040" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-136" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1740" y="700" width="590" height="710" as="geometry" />
-        </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-156" value="timer_ISR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="400" y="730" width="110" height="30" as="geometry" />
         </mxCell>
@@ -332,6 +329,62 @@
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-180" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;extern을 통해&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;TIMER, HEX, msec에 대한&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;main의 전역변수를 사용할 수 있게 함.&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="400" y="760" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-187" value="pushbutton_ISR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-413" y="750" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-188" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-189" target="nFpczwYycdGY-wKEFIsx-194">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-189" value="KEY의 edge capture register의 값을 읽어옴&lt;br&gt;&amp;nbsp;IRQ와 edge capture register 초기화" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="900" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-190" value="return" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-420" y="1780" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-191" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-192" target="nFpczwYycdGY-wKEFIsx-198">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-192" value="sec = (msec / 1000) % 60;&lt;br&gt;min = (msec / (1000 * 60)) % 60;&lt;div&gt;msec를 분과 초 단위로 변경&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="1270" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-193" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-194" target="nFpczwYycdGY-wKEFIsx-196">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-194" value="msec++로 밀리초를 셈&lt;br&gt;만약 60분이 되면 00분00초000밀리초&lt;br&gt;각각 모두 BIT_CODES 함수에 입력해 Binary code로 변환" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="990" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-195" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-196" target="nFpczwYycdGY-wKEFIsx-192">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-196" value="만약 60분이 되면&lt;div&gt;00분00초000밀리초로&lt;/div&gt;&lt;div&gt;초기화&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="1140" width="260" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-197" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-198" target="nFpczwYycdGY-wKEFIsx-200">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-198" value="int hex0 = (msec / 10) % 10;&lt;div&gt;int hex1 = (msec / 100) % 10;&lt;/div&gt;&lt;div&gt;int hex2 = sec % 10;&lt;/div&gt;&lt;div&gt;int hex3 = sec / 10;&lt;/div&gt;&lt;div&gt;int hex4 = min % 10;&lt;/div&gt;&lt;div&gt;int hex5 = min / 10;&lt;/div&gt;&lt;div&gt;hex에 대한 decimal 값을 할당&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="1380" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-199" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-200" target="nFpczwYycdGY-wKEFIsx-202">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-200" value="hex에 저장된 decimal 값을&lt;div&gt;BIT_CODES[]에서 대응 후&lt;/div&gt;&lt;div&gt;shift와 or연산으로 32bit로 합침.&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="1570" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-201" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-202" target="nFpczwYycdGY-wKEFIsx-190">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-202" value="main()에서 끌어온 HEX 포인터에&lt;div&gt;디스플레이&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="1690" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-203" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="nFpczwYycdGY-wKEFIsx-189">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-290" y="870" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-204" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;extern을 통해&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;KEY, HEX, msec에 대한&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;main의 전역변수를 사용할 수 있게 함.&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-420" y="780" width="260" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
