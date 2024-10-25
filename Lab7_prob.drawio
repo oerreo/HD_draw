@@ -16,13 +16,13 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-56" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-57" target="nFpczwYycdGY-wKEFIsx-59">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-57" value="&lt;font style=&quot;&quot;&gt;IENABLE = 3&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;KEY 와 TIMER의 IRQ를 1로 설정&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-57" value="&lt;font style=&quot;&quot;&gt;IENABLE = 3&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;KEY 와 TIMER의 인터럽트 허용&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="420" width="280" height="90" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-58" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-59" target="nFpczwYycdGY-wKEFIsx-61">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-59" value="&lt;font&gt;STATUS register에 1을 넣어&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font&gt;PIE를 1로 설정&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-59" value="&lt;font&gt;STATUS = 1&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font&gt;PIE를 1로 설정&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="530" width="280" height="90" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-60" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#FF0000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;strokeWidth=2;dashed=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-61" target="nFpczwYycdGY-wKEFIsx-63">
@@ -33,22 +33,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-61" value="while(1) *HEX3_0_ptr = hex_value&lt;br&gt;&lt;font&gt;HEX3_0의 주소에 값을 입력해 출력&lt;br&gt;interrupt가 올 때까지 반복&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-61" value="while(1) {}&lt;font&gt;&lt;br&gt;interrupt가 올 때까지 반복&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="640" width="280" height="90" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-62" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-63" target="nFpczwYycdGY-wKEFIsx-66">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-63" value="&lt;b&gt;Assembly Code&lt;/b&gt;&lt;br&gt;&lt;font&gt;ctl4를 읽으면서 &lt;br&gt;exception이 HW interrupt인지 확인&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="410" y="120" width="200" height="90" as="geometry" />
+        <mxCell id="nFpczwYycdGY-wKEFIsx-63" value="&lt;b&gt;Inline Assembly&lt;/b&gt;&lt;br&gt;&lt;font&gt;ctl4를 읽으면서 &lt;br&gt;exception이 HW interrupt인지 확인&lt;br&gt;trap 처리&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="410" y="110" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-64" value="exception_handler" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="410" y="90" width="130" height="30" as="geometry" />
+          <mxGeometry x="410" y="80" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-65" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-66" target="nFpczwYycdGY-wKEFIsx-68">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-66" value="&lt;b&gt;Assembly Code&lt;/b&gt;&lt;br&gt;&lt;font&gt;ea, ra를 포함한 모든 register를 stack에 저장&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-66" value="&lt;b&gt;Inline Assembly&lt;/b&gt;&lt;br&gt;&lt;font&gt;ea, ra를 포함한 모든 register를 stack에 저장&lt;/font&gt;&lt;div&gt;(포괄적으로 처리)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="410" y="230" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-67" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-68" target="nFpczwYycdGY-wKEFIsx-70">
@@ -102,7 +102,7 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-81" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="720" y="240" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-82" value="interrupt" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#FF0000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-82" value="interrupt" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#FF0000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;fontStyle=1;gradientColor=none;" vertex="1" parent="1">
           <mxGeometry x="311" y="380" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-83" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=8;endSize=8;shape=connector;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-68" target="nFpczwYycdGY-wKEFIsx-93">
