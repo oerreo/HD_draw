@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="페이지-1" id="9iILnwIiuNrRD6EVz0-I">
-    <mxGraphModel dx="576" dy="286" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1884" dy="936" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -287,7 +287,7 @@
           <mxGeometry x="400" y="880" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-159" value="return" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="400" y="1810" width="260" height="30" as="geometry" />
+          <mxGeometry x="400" y="1760" width="260" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-173" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-161" target="nFpczwYycdGY-wKEFIsx-172">
           <mxGeometry relative="1" as="geometry" />
@@ -319,7 +319,10 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-174" value="hex에 저장된 decimal 값을&lt;div&gt;BIT_CODES[]에서 대응 후&lt;/div&gt;&lt;div&gt;shift와 or연산으로 32bit로 합침.&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="400" y="1550" width="260" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-178" value="" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-185" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-178" target="nFpczwYycdGY-wKEFIsx-159">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-178" value="main()에서 끌어온 HEX 포인터에&lt;div&gt;디스플레이&lt;/div&gt;" style="whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="400" y="1670" width="260" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-181" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="nFpczwYycdGY-wKEFIsx-158">
