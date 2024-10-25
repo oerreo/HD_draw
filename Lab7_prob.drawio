@@ -42,7 +42,7 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-63" value="&lt;b&gt;Assembly Code&lt;/b&gt;&lt;br&gt;&lt;font&gt;ctl4를 읽으면서 &lt;br&gt;exception이 HW interrupt인지 확인&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="410" y="120" width="200" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-64" value="the_exception" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-64" value="exception_handler" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="410" y="90" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-65" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-66" target="nFpczwYycdGY-wKEFIsx-68">
@@ -120,7 +120,7 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-86" target="nFpczwYycdGY-wKEFIsx-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-86" value="타이머 주기 설정&lt;div&gt;period = 100,000&lt;br&gt;*(TIMER_ptr + 1) = 0b0111&lt;br&gt;ms의 주기는 100,000&lt;br&gt;periodl과 periodh에 값을 입력&lt;br&gt;control register에 0111을 입력해 CONT와 ITO 모드로 start&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-86" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;밀리초 셀 msec 선언&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;타이머 주기 설정&lt;div&gt;period = 100,000&lt;br&gt;&lt;br&gt;periodl과 periodh에 값을 입력&lt;br&gt;control register에 0111을 입력해 CONT와 ITO 모드로 start&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="120" width="280" height="190" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-89" target="nFpczwYycdGY-wKEFIsx-92">
