@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="페이지-1" id="9iILnwIiuNrRD6EVz0-I">
-    <mxGraphModel dx="1036" dy="515" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="714" dy="355" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -25,14 +25,6 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-59" value="&lt;font&gt;STATUS = 1&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font&gt;PIE를 1로 설정&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="530" width="280" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-60" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#FF0000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;strokeWidth=2;dashed=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-61" target="nFpczwYycdGY-wKEFIsx-63">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="360" y="685" />
-              <mxPoint x="360" y="165" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-61" value="while(1) {}&lt;font&gt;&lt;br&gt;interrupt가 올 때까지 반복&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="640" width="280" height="90" as="geometry" />
         </mxCell>
@@ -43,28 +35,28 @@
           <mxGeometry x="410" y="110" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-64" value="exception_handler" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="410" y="80" width="130" height="30" as="geometry" />
+          <mxGeometry x="414" y="80" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-65" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-66" target="nFpczwYycdGY-wKEFIsx-68">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-66" value="&lt;b&gt;Inline Assembly&lt;/b&gt;&lt;br&gt;&lt;font&gt;ea, ra를 포함한 모든 register를 stack에 저장&lt;/font&gt;&lt;div&gt;(포괄적으로 처리)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="410" y="230" width="200" height="80" as="geometry" />
+        <mxCell id="nFpczwYycdGY-wKEFIsx-66" value="&lt;b&gt;Inline Assembly&lt;/b&gt;&lt;div&gt;인터럽트 처리 전&lt;br&gt;&lt;font&gt;ea, ra를 포함한 모든 register를 stack에 저장&lt;/font&gt;&lt;div&gt;(포괄적으로 처리)&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="410" y="230" width="200" height="100" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-67" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-68" target="nFpczwYycdGY-wKEFIsx-70">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-68" value="Call interrupt_handler" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="410" y="330" width="200" height="60" as="geometry" />
+          <mxGeometry x="410" y="350" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-69" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-70" target="nFpczwYycdGY-wKEFIsx-71">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-70" value="&lt;b&gt;Assembly Code&lt;/b&gt;&lt;br&gt;&lt;font&gt;ea, ra를 포함한 모든 register를 stack에서 불러옴&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
-          <mxGeometry x="410" y="410" width="200" height="80" as="geometry" />
+        <mxCell id="nFpczwYycdGY-wKEFIsx-70" value="&lt;b&gt;Inline Assembly&lt;/b&gt;&lt;div&gt;인터럽트 처리가 끝나면&lt;br&gt;&lt;font&gt;ea, ra를 포함한 모든 register를 stack에서 불러옴&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="410" y="430" width="200" height="80" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-71" value="&lt;b&gt;Exception return&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
-          <mxGeometry x="410" y="510" width="200" height="50" as="geometry" />
+          <mxGeometry x="410" y="530" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-72" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-73" target="nFpczwYycdGY-wKEFIsx-77">
           <mxGeometry relative="1" as="geometry" />
@@ -102,21 +94,6 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-81" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="720" y="240" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-82" value="interrupt" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;strokeColor=#FF0000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;fontStyle=1;gradientColor=none;" vertex="1" parent="1">
-          <mxGeometry x="311" y="380" width="100" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-83" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=8;endSize=8;shape=connector;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-68" target="nFpczwYycdGY-wKEFIsx-93">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="680" y="370" as="sourcePoint" />
-            <mxPoint x="660" y="115.00000000000023" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-84" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;startSize=8;endSize=8;shape=connector;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-68" target="nFpczwYycdGY-wKEFIsx-93">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="680" y="370" as="sourcePoint" />
-            <mxPoint x="660" y="539.9999999999998" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-86" target="nFpczwYycdGY-wKEFIsx-55">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -145,9 +122,6 @@
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-92" value="Call pushbutton_ISR" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="720" y="530" width="280" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-93" value="" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;strokeWidth=2;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="690" y="115" width="340" height="575" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-94" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-95" target="nFpczwYycdGY-wKEFIsx-97">
           <mxGeometry relative="1" as="geometry" />
@@ -300,11 +274,35 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-134" value="변환한 binary code를 각 출력될 HEX의 위치에 맞게 shift 후 병합" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;" vertex="1" parent="1">
           <mxGeometry x="2040" y="1040" width="260" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-135" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=2;" vertex="1" parent="1">
-          <mxGeometry x="1160" y="700" width="570" height="710" as="geometry" />
-        </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-136" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;strokeWidth=2;" vertex="1" parent="1">
           <mxGeometry x="1740" y="700" width="590" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-156" value="timer_ISR" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="800" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-164" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-158" target="nFpczwYycdGY-wKEFIsx-163">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-158" value="TO를 0으로 초기화" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="400" y="830" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-159" value="return" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="410" y="1390" width="260" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-160" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-161" target="nFpczwYycdGY-wKEFIsx-159">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-161" value="변환한 binary code를 각 출력될 HEX의 위치에 맞게 shift 후 병합" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="410" y="1280" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-168" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-163" target="nFpczwYycdGY-wKEFIsx-167">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-163" value="msec++로 밀리초를 셈&lt;br&gt;만약 60분이 되면 00분00초000밀리초&lt;br&gt;각각 모두 BIT_CODES 함수에 입력해 Binary code로 변환" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=default;" vertex="1" parent="1">
+          <mxGeometry x="400" y="920" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="nFpczwYycdGY-wKEFIsx-167" value="만약 60분이 되면&lt;div&gt;00분00초000밀리초로&lt;/div&gt;&lt;div&gt;초기화&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;fontSize=16;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1100" width="260" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
