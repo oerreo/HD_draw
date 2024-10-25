@@ -16,13 +16,13 @@
         <mxCell id="nFpczwYycdGY-wKEFIsx-56" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-57" target="nFpczwYycdGY-wKEFIsx-59">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-57" value="NIOS2_WRITE_IENABLE(0x3)&lt;br&gt;&lt;font style=&quot;&quot;&gt;IENABLE register에 3을 입력해 KEY 와 TIMER의 IRQ를 1로 설정&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-57" value="&lt;font style=&quot;&quot;&gt;IENABLE = 3&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;&quot;&gt;KEY 와 TIMER의 IRQ를 1로 설정&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="420" width="280" height="90" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-58" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-59" target="nFpczwYycdGY-wKEFIsx-61">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nFpczwYycdGY-wKEFIsx-59" value="NIOS2_WRITE_STATUS(1)&lt;br&gt;&lt;font&gt;STATUS register에 1을 넣어 Nios2 interrupt processing 설정&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="nFpczwYycdGY-wKEFIsx-59" value="&lt;font&gt;STATUS register에 1을 넣어&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font&gt;PIE를 1로 설정&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fontColor=#000000;" vertex="1" parent="1">
           <mxGeometry x="40" y="530" width="280" height="90" as="geometry" />
         </mxCell>
         <mxCell id="nFpczwYycdGY-wKEFIsx-60" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=#FF0000;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;strokeWidth=2;dashed=1;" edge="1" parent="1" source="nFpczwYycdGY-wKEFIsx-61" target="nFpczwYycdGY-wKEFIsx-63">
