@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.2">
   <diagram name="페이지-1" id="Eq7YuwOW7Tf-VBCsC_Ay">
-    <mxGraphModel dx="2947" dy="653" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2553" dy="1623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -390,10 +390,10 @@
         <mxCell id="tzvYg6URVx5uAKnSjCbO-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-108" target="tzvYg6URVx5uAKnSjCbO-109">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-108" value="screen을 검은 화면으로 초기화하고 시작" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry y="290" width="240" height="40" as="geometry" />
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-108" value="screen을 검은 화면으로 초기화" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="280" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-109" value="pixel_buffer_start = *pixel_ctrl_ptr&lt;br&gt;clean_screen(0x00, 0x00, 0x00)&lt;br&gt;*(pixel_ctrl_ptr + 1) = back_buffer&lt;br&gt;pixel buffer의 시작 위치를 받아와&lt;br&gt;검은색 화면으로 초기화 후&lt;br&gt;두번째 buffer 주소를 back buffer의 시작 주소로 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-109" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry y="350" width="240" height="110" as="geometry" />
         </mxCell>
         <mxCell id="tzvYg6URVx5uAKnSjCbO-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-110" target="tzvYg6URVx5uAKnSjCbO-105">
@@ -401,6 +401,30 @@
         </mxCell>
         <mxCell id="tzvYg6URVx5uAKnSjCbO-110" value="PIXEL, FILL_PIXEL 함수 정의&lt;div&gt;volatile int pixel_buffer_start;&lt;/div&gt;&lt;div&gt;volatile int *pixel_ctrl_ptr;&lt;/div&gt;&lt;div&gt;short int front_buffer[512 * 256];&lt;/div&gt;&lt;div&gt;short int back_buffer[512 * 256];&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry y="60" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-112" value="화면 전체 픽셀에 입력한 rgb값으로 채움.&lt;br&gt;화면 크기만큼의 사각형으로 draw square하여&amp;nbsp;동작" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="20" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-113" value="&lt;b&gt;clear_screen&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="-10" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-114" value="&lt;b&gt;사각형에 색을 입력하는 함수&lt;/b&gt;&lt;br&gt;x좌표 두개와 y좌표 두개를 입력받아&lt;br&gt;x좌표의 시작부터 끝까지&lt;br&gt;y좌표의 시작부터 끝까지&lt;br&gt;각 픽셀에 색을 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="130" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-115" value="&lt;b&gt;draw_square&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="100" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-116" value="&lt;b&gt;vsync를 기다리는 함수&lt;/b&gt;&lt;br&gt;pixel buffer controller의 status register를 읽어와&lt;br&gt;status의 LSB(vsync)가 0이 될때까지&amp;nbsp;&lt;br&gt;status의 값을 갱신하며 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="260" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-117" value="&lt;b&gt;wait_for_vsync&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="230" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-118" value="&lt;b&gt;x, y좌표의 픽셀에 색을 입력하는 함수&lt;/b&gt;&lt;br&gt;pixel buffer의 시작위치에 x좌표와 y좌표를 더해서 해당 위치에 색을 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="380" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-119" value="&lt;b&gt;plot_pixel&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390" y="350" width="100" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
