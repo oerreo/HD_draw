@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.2">
   <diagram name="페이지-1" id="Eq7YuwOW7Tf-VBCsC_Ay">
-    <mxGraphModel dx="2553" dy="1623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2742" dy="1710" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -390,11 +390,11 @@
         <mxCell id="tzvYg6URVx5uAKnSjCbO-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-108" target="tzvYg6URVx5uAKnSjCbO-109">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-108" value="screen을 검은 화면으로 초기화" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-108" value="screen을 검은 화면으로 초기화&lt;div&gt;초기 속도 = 0, 초기 원의 위치 = 화면 중앙&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry y="280" width="240" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-109" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry y="350" width="240" height="110" as="geometry" />
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-109" value="KEY의 인터럽트를 허용" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="350" width="240" height="30" as="geometry" />
         </mxCell>
         <mxCell id="tzvYg6URVx5uAKnSjCbO-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-110" target="tzvYg6URVx5uAKnSjCbO-105">
           <mxGeometry relative="1" as="geometry" />
