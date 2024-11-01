@@ -468,11 +468,8 @@
         <mxCell id="tzvYg6URVx5uAKnSjCbO-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-134" target="tzvYg6URVx5uAKnSjCbO-139">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-134" value="for(int i = 0; i &amp;lt; 1233; i++)&lt;br&gt;글자의 총 픽셀 1233개 반복&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-134" value="중심 좌표를 dx, dy만큼 이동" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="0.02999999999996561" y="900" width="240" height="150" as="geometry" />
-        </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-135" value="plot_pixel(x[i] - 250,+ dx, y[i], 0xFFFF)&lt;br&gt;지정 좌표의 픽셀에 검은색 입력&lt;br&gt;-250은 글자가 왼쪽 끝에서 출력하기 위해 글자의 길이만큼 뺌&lt;br&gt;x축을 dx만큼 이동" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="10.029999999999966" y="950" width="220" height="90" as="geometry" />
         </mxCell>
         <mxCell id="tzvYg6URVx5uAKnSjCbO-136" value="-dx&lt;div&gt;-dy&lt;/div&gt;&lt;div&gt;로 반전&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="280" y="800" width="110" height="50" as="geometry" />
@@ -488,7 +485,7 @@
         <mxCell id="tzvYg6URVx5uAKnSjCbO-138" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-139" target="tzvYg6URVx5uAKnSjCbO-124">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-139" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-139" value="원을 그림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="0.02999999999996561" y="1070" width="240" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tzvYg6URVx5uAKnSjCbO-142" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-140" target="tzvYg6URVx5uAKnSjCbO-124">
