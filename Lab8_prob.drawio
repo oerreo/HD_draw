@@ -429,8 +429,8 @@
         <mxCell id="tzvYg6URVx5uAKnSjCbO-119" value="&lt;b&gt;draw_circle&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="390" y="350" width="100" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-120" value="" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
-          <mxGeometry y="400" width="240" height="60" as="geometry" />
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-120" value="속도를 나타낼 dx,dy 그리고 초기의 랜덤한 속도인&lt;div&gt;random_dx, random_dy 선언 및 할당&lt;/div&gt;&lt;div&gt;초기 dx,dy는 0으로 움직이지 않음.&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="405" width="240" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
