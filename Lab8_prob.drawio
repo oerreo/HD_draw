@@ -1,9 +1,407 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.8.2">
   <diagram name="페이지-1" id="Eq7YuwOW7Tf-VBCsC_Ay">
-    <mxGraphModel>
+    <mxGraphModel dx="2947" dy="653" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-3" target="tzvYg6URVx5uAKnSjCbO-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-3" value="pixel_ctrl_ptr = *PIXEL_BUF_CTRL_BASE&lt;br&gt;*(pixel_ctrl_ptr + 1) = front_buffer&lt;br&gt;포인터에 pixel buffer controller의 주소 저장&lt;br&gt;첫번째 buffer의 주소를 back buffer 시작 주소로 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="80" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-4" value="&lt;b&gt;main&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="830" y="50" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-6" target="tzvYg6URVx5uAKnSjCbO-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-6" value="wait_for_vsync()&lt;br&gt;한 buffer의 입력이 끝나는 vsync를 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="190" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-8" target="tzvYg6URVx5uAKnSjCbO-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-8" value="pixel_buffer_start = *pixel_ctrl_ptr&lt;br&gt;clean_screen(0x00, 0x00, 0x00)&lt;br&gt;*(pixel_ctrl_ptr + 1) = back_buffer&lt;br&gt;pixel buffer의 시작 위치를 받아와&lt;br&gt;검은색 화면으로 초기화 후&lt;br&gt;두번째 buffer 주소를 back buffer의 시작 주소로 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="250" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-10" target="tzvYg6URVx5uAKnSjCbO-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-10" value="pixel_buffer_start = *pixel_ctrl_ptr&lt;br&gt;clear_screen(0x00, 0x00, 0x00)&lt;br&gt;pixel buffer의 시작 위치를 받아와&lt;br&gt;검은색 화면으로 초기화" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="400" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-11" value="&lt;b&gt;while(1)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="830" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-14" target="tzvYg6URVx5uAKnSjCbO-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-14" target="tzvYg6URVx5uAKnSjCbO-41">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-14" value="dx == 520&lt;br&gt;프레임의 너비에&lt;br&gt;글자크기 만큼 더함" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="560" width="160" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-17" target="tzvYg6URVx5uAKnSjCbO-19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="1050" />
+              <mxPoint x="990" y="1100" />
+              <mxPoint x="1020" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-17" target="tzvYg6URVx5uAKnSjCbO-21">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1190" y="1050" />
+              <mxPoint x="1190" y="1100" />
+              <mxPoint x="1160" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-17" value="y == SCREEN_HEIGHT&lt;br&gt;선이 천장에 닿았을때" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1010" y="1010" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-19" target="tzvYg6URVx5uAKnSjCbO-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-19" value="status = 0&lt;br&gt;상태를 하강으로 변경" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1120" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-21" target="tzvYg6URVx5uAKnSjCbO-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="1170" />
+              <mxPoint x="950" y="1170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-21" value="y = y - 1&lt;br&gt;1행씩 올라감" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="1120" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-22" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="970" y="1010" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-23" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1150" y="1010" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-26" target="tzvYg6URVx5uAKnSjCbO-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="710" y="1050" />
+              <mxPoint x="710" y="1100" />
+              <mxPoint x="740" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-26" target="tzvYg6URVx5uAKnSjCbO-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="910" y="1050" />
+              <mxPoint x="910" y="1100" />
+              <mxPoint x="880" y="1100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-26" value="y == 0&lt;br&gt;선이 바닥에 닿았을때" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1010" width="160" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-28" target="tzvYg6URVx5uAKnSjCbO-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="1170" />
+              <mxPoint x="950" y="1170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-28" value="status = 1&lt;br&gt;상태를 상승으로 변경" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1120" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-30" target="tzvYg6URVx5uAKnSjCbO-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-30" value="y = y + 1&lt;br&gt;1행씩 내려감" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="820" y="1120" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-31" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="690" y="1010" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-32" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="870" y="1010" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-33" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="990" y="560" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-34" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="960" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-35" value="draw_line(100, y, 220, y, 0xFFFF)&lt;br&gt;x좌표 100부터 220의 길이 120의 흰색 선&lt;br&gt;y좌표는 위의 과정에서 나온 결과를 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="1190" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-37" target="tzvYg6URVx5uAKnSjCbO-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-37" value="dx = dx + 5&lt;br&gt;5열씩 우측으로 글자가 이동" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="490" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-39" target="tzvYg6URVx5uAKnSjCbO-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-39" value="for(int i = 0; i &amp;lt; 1233; i++)&lt;br&gt;글자의 총 픽셀 1233개 반복&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="680" width="240" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-40" value="plot_pixel(x[i] - 250,+ dx, y[i], 0xFFFF)&lt;br&gt;지정 좌표의 픽셀에 검은색 입력&lt;br&gt;-250은 글자가 왼쪽 끝에서 출력하기 위해 글자의 길이만큼 뺌&lt;br&gt;x축을 dx만큼 이동" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="730" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-41" value="dx = 0&lt;br&gt;dx 0으로 초기화" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="580" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-41" target="tzvYg6URVx5uAKnSjCbO-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1135" y="660" />
+              <mxPoint x="950" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-44" target="tzvYg6URVx5uAKnSjCbO-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-44" value="wait_for_vsync()&lt;br&gt;한 buffer의 입력이 끝나는 vsync를 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="830" y="850" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-45" value="&lt;b&gt;화면 전체를 색을 입혀 초기화하는 함수&lt;/b&gt;&lt;br&gt;draw_square(0, 0, SCREEN_WIDTH-1, SCREEN_HEIGHT-1, r, g, b)&lt;br&gt;화면 크기만큼의 사각형에 색깔 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="90" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-46" value="&lt;b&gt;clear_screen&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="60" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-47" value="&lt;b&gt;사각형에 색을 입력하는 함수&lt;/b&gt;&lt;br&gt;x좌표 두개와 y좌표 두개를 입력받아&lt;br&gt;x좌표의 시작부터 끝까지&lt;br&gt;y좌표의 시작부터 끝까지&lt;br&gt;각 픽셀에 색을 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="200" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-48" value="&lt;b&gt;draw_square&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="170" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-49" value="&lt;b&gt;vsync를 기다리는 함수&lt;/b&gt;&lt;br&gt;pixel buffer controller의 status register를 읽어와&lt;br&gt;status의 LSB(vsync)가 0이 될때까지&amp;nbsp;&lt;br&gt;status의 값을 갱신하며 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="330" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-50" value="&lt;b&gt;wait_for_vsync&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="300" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-51" value="&lt;b&gt;x, y좌표의 픽셀에 색을 입력하는 함수&lt;/b&gt;&lt;br&gt;pixel buffer의 시작위치에 x좌표와 y좌표를 더해서 해당 위치에 색을 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="450" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-52" value="&lt;b&gt;plot_pixel&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1320" y="420" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-54" target="tzvYg6URVx5uAKnSjCbO-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-54" value="pixel_ctrl_ptr = *PIXEL_BUF_CTRL_BASE&lt;br&gt;*(pixel_ctrl_ptr + 1) = front_buffer&lt;br&gt;포인터에 pixel buffer controller의 주소 저장&lt;br&gt;첫번째 buffer의 주소를 back buffer 시작 주소로 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="150" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-55" value="&lt;b&gt;main&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="120" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-57" target="tzvYg6URVx5uAKnSjCbO-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-57" value="wait_for_vsync()&lt;br&gt;한 buffer의 입력이 끝나는 vsync를 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="260" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-58" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-59" target="tzvYg6URVx5uAKnSjCbO-74">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-59" value="pixel_buffer_start = *pixel_ctrl_ptr&lt;br&gt;clean_screen(0x00, 0x00, 0x00)&lt;br&gt;*(pixel_ctrl_ptr + 1) = back_buffer&lt;br&gt;pixel buffer의 시작 위치를 받아와&lt;br&gt;검은색 화면으로 초기화 후&lt;br&gt;두번째 buffer 주소를 back buffer의 시작 주소로 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="320" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-60" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-61" target="tzvYg6URVx5uAKnSjCbO-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-61" value="pixel_buffer_start = *pixel_ctrl_ptr&lt;br&gt;clear_screen(0x00, 0x00, 0x00)&lt;br&gt;pixel buffer의 시작 위치를 받아와&lt;br&gt;검은색 화면으로 초기화" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="580" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-62" value="&lt;b&gt;while(1)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="550" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-63" value="&lt;b&gt;화면 전체를 색을 입혀 초기화하는 함수&lt;/b&gt;&lt;br&gt;draw_square(0, 0, SCREEN_WIDTH-1, SCREEN_HEIGHT-1, r, g, b)&lt;br&gt;화면 크기만큼의 사각형에 색깔 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-755" y="160" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-64" value="&lt;b&gt;clear_screen&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-755" y="130" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-65" value="&lt;b&gt;사각형에 색을 입력하는 함수&lt;/b&gt;&lt;br&gt;x좌표 두개와 y좌표 두개를 입력받아&lt;br&gt;x좌표의 시작부터 끝까지&lt;br&gt;y좌표의 시작부터 끝까지&lt;br&gt;각 픽셀에 색을 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-530" y="140" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-66" value="&lt;b&gt;draw_square&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-530" y="110" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-67" value="&lt;b&gt;vsync를 기다리는 함수&lt;/b&gt;&lt;br&gt;pixel buffer controller의 status register를 읽어와&lt;br&gt;status의 LSB(vsync)가 0이 될때까지&amp;nbsp;&lt;br&gt;status의 값을 갱신하며 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-980" y="50" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-68" value="&lt;b&gt;wait_for_vsync&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-980" y="20" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-69" value="&lt;b&gt;x, y좌표의 픽셀에 색을 입력하는 함수&lt;/b&gt;&lt;br&gt;pixel buffer의 시작위치에 x좌표와 y좌표를 더해서 해당 위치에 색을 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-755" y="60" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-70" value="&lt;b&gt;plot_pixel&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-755" y="30" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-71" value="&lt;b&gt;원하는 위치에 직선을 그리는 함수&lt;/b&gt;&lt;br&gt;직선을 그리는 Bresenham&#39;s algorithm을&lt;br&gt;사용하여 기울기에 따라 기준 축을 정해 1씩 증가하거나 감소하며 직선을 그림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-980" y="160" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-72" value="&lt;b&gt;draw_line&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-980" y="130" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-73" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-74" target="tzvYg6URVx5uAKnSjCbO-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-74" value="&lt;font style=&quot;font-size: 12px;&quot;&gt;for(int i = 0; i &amp;lt; 8; i ++)&lt;br&gt;rand 함수를 사용해 8개의 각 사각형의&amp;nbsp;&lt;br&gt;x, y좌표 이동방향&lt;br&gt;x, y좌표 시작위치를 난수로 지정&lt;br&gt;&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="450" width="240" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-75" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-76" target="tzvYg6URVx5uAKnSjCbO-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-76" value="bounce_direction_x()&lt;br&gt;bounce_direction_y()&lt;br&gt;x, y좌표의 다음 위치를 계산하는 함수를 사용해 다음 좌표 계산" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="670" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-77" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-78" target="tzvYg6URVx5uAKnSjCbO-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-78" value="for(int i = 0; i &amp;lt; 8; i++)&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;8번 반복하여 8개의 사각형과 사각형을 잇는 직선을 그림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1600" y="760" width="280" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-79" value="draw_square&lt;br&gt;크기가 2인 흰색 사각형&lt;br&gt;x, y좌표는 위의 과정에서 계산한 값 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="790" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-80" value="draw_line&lt;br&gt;각 사각형들을 잇는 흰색 선을 그림&lt;br&gt;마지막 선은 첫번째 사각형과 이어짐" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="860" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-81" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-82" target="tzvYg6URVx5uAKnSjCbO-61">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1280" y="1015" />
+              <mxPoint x="-1280" y="615" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-82" value="wait_for_vsync()&lt;br&gt;한 buffer의 입력이 끝나는 vsync를 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-1580" y="990" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-83" value="&lt;b&gt;x, y 좌표의 다음 위치와 이동방향을 계산하는 함수&lt;/b&gt;&lt;br&gt;for(int i =0; i &amp;lt; 8; i++)&lt;br&gt;8개의 사각형에 대한 계산&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-980" y="270" width="560" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-84" value="&lt;b&gt;bounce_direction_x/y&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-980" y="240" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-85" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-87" target="tzvYg6URVx5uAKnSjCbO-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-87" target="tzvYg6URVx5uAKnSjCbO-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-87" value="direction == 0&lt;br&gt;x : 우측, y : 하단" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-775" y="325" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-88" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-90" target="tzvYg6URVx5uAKnSjCbO-102">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-655" y="450" />
+              <mxPoint x="-655" y="485" />
+              <mxPoint x="-630" y="485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-89" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-90" target="tzvYg6URVx5uAKnSjCbO-103">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-455" y="450" />
+              <mxPoint x="-455" y="485" />
+              <mxPoint x="-485" y="485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-90" value="x, y == 0&lt;br&gt;x : 오른쪽에 닿았을때&lt;br&gt;y : 위에 닿았을때" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-635" y="395" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-91" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-675" y="395" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-92" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-495" y="395" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-93" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-95" target="tzvYg6URVx5uAKnSjCbO-96">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-935" y="450" />
+              <mxPoint x="-935" y="485" />
+              <mxPoint x="-910" y="485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-94" style="edgeStyle=orthogonalEdgeStyle;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=default;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fontColor=default;endArrow=classic;startSize=8;endSize=8;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-95" target="tzvYg6URVx5uAKnSjCbO-97">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-735" y="450" />
+              <mxPoint x="-735" y="485" />
+              <mxPoint x="-765" y="485" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-95" value="x, y == 프레임 최대값&lt;br&gt;x : 왼쪽에 닿았을때&lt;br&gt;y : 아래에 닿았을때" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-915" y="395" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-96" value="direction = 1&lt;br&gt;x : 좌측 이동으로 변경&lt;br&gt;y : 상단 이동으로 변경" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-975" y="505" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-97" value="x = x + 1&lt;br&gt;y = y + 1&lt;br&gt;x : 1열씩 우측 이동&lt;br&gt;y : 1행씩 하단 이동" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-825" y="505" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-98" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-955" y="405" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-99" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-775" y="405" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-100" value="Yes" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-805" y="315" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-101" value="No" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-645" y="315" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-102" value="direction = 0&lt;br&gt;x : 우측 이동으로 변경&lt;br&gt;y : 하단 이동으로 변경" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-695" y="505" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-103" value="x = x - 1&lt;br&gt;y = y - 1&lt;br&gt;x : 1열씩 좌측 이동&lt;br&gt;y : 1행씩 상단 이동" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-545" y="505" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-105" target="tzvYg6URVx5uAKnSjCbO-108">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-105" value="앞서 선언해둔 front_buffer와 &lt;br&gt;back_buffer 배열 주소를&amp;nbsp;&lt;br&gt;pixel controller(offset 0, 4)에 저장." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="180" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-106" value="&lt;b&gt;main&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="150" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-107" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-108" target="tzvYg6URVx5uAKnSjCbO-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-108" value="screen을 검은 화면으로 초기화하고 시작" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="290" width="240" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-109" value="pixel_buffer_start = *pixel_ctrl_ptr&lt;br&gt;clean_screen(0x00, 0x00, 0x00)&lt;br&gt;*(pixel_ctrl_ptr + 1) = back_buffer&lt;br&gt;pixel buffer의 시작 위치를 받아와&lt;br&gt;검은색 화면으로 초기화 후&lt;br&gt;두번째 buffer 주소를 back buffer의 시작 주소로 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="350" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-111" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="tzvYg6URVx5uAKnSjCbO-110" target="tzvYg6URVx5uAKnSjCbO-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-110" value="PIXEL, FILL_PIXEL 함수 정의&lt;div&gt;volatile int pixel_buffer_start;&lt;/div&gt;&lt;div&gt;volatile int *pixel_ctrl_ptr;&lt;/div&gt;&lt;div&gt;short int front_buffer[512 * 256];&lt;/div&gt;&lt;div&gt;short int back_buffer[512 * 256];&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="60" width="240" height="90" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
