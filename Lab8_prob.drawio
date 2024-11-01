@@ -414,7 +414,7 @@
         <mxCell id="tzvYg6URVx5uAKnSjCbO-115" value="&lt;b&gt;draw_square&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="390" y="100" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-116" value="&lt;b&gt;vsync를 기다리는 함수&lt;/b&gt;&lt;br&gt;pixel buffer controller의 status register를 읽어와&lt;br&gt;status의 LSB(vsync)가 0이 될때까지&amp;nbsp;&lt;br&gt;status의 값을 갱신하며 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-116" value="V-SYNC event를 기다림.&lt;br&gt;pixel buffer controller의 status register를 읽어와&lt;br&gt;status의 LSB(vsync)가 0이 될때까지&amp;nbsp;&lt;br&gt;status의 값을 갱신하며 기다림" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="390" y="260" width="220" height="80" as="geometry" />
         </mxCell>
         <mxCell id="tzvYg6URVx5uAKnSjCbO-117" value="&lt;b&gt;wait_for_vsync&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
