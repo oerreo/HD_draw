@@ -408,7 +408,7 @@
         <mxCell id="tzvYg6URVx5uAKnSjCbO-113" value="&lt;b&gt;clear_screen&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="390" y="-10" width="80" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="tzvYg6URVx5uAKnSjCbO-114" value="&lt;b&gt;사각형에 색을 입력하는 함수&lt;/b&gt;&lt;br&gt;x좌표 두개와 y좌표 두개를 입력받아&lt;br&gt;x좌표의 시작부터 끝까지&lt;br&gt;y좌표의 시작부터 끝까지&lt;br&gt;각 픽셀에 색을 입력" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="tzvYg6URVx5uAKnSjCbO-114" value="(x0,y0), (x1,y1)을 입력받아&lt;br&gt;두 좌표를 각각 왼쪽 상단, 오른쪽 하단으로&lt;br&gt;하는 사각형 모든 픽셀에 rgb값을 채움" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="390" y="130" width="220" height="90" as="geometry" />
         </mxCell>
         <mxCell id="tzvYg6URVx5uAKnSjCbO-115" value="&lt;b&gt;draw_square&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
